@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1965123020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965123021}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1965123021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965123020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.12, z: 3.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2839066128674588743}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158971626746246626
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +635,7 @@ GameObject:
   - component: {fileID: 2839066128674588743}
   - component: {fileID: 2372511791063461820}
   - component: {fileID: 5023501571030084834}
+  - component: {fileID: 356049089}
   m_Layer: 0
   m_Name: build_Artillery
   m_TagString: Untagged
@@ -625,6 +657,7 @@ Transform:
   m_Children:
   - {fileID: 1817762267066590614}
   - {fileID: 6300002771315145091}
+  - {fileID: 1965123021}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -641,7 +674,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 656e02f1470601746ae6780de667b66b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -660,7 +693,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -705,7 +738,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -745,6 +778,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &356049089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183397558408860413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbe07b5150043f8be25592a66e8faf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootClip: {fileID: 8300000, guid: dcbd0e9b25eca0b409352e6e40e0b5a1, type: 3}
+  _gearsClip: {fileID: 8300000, guid: 49aece93f0021254c884d5f3571ff7c4, type: 3}
+  _bulletPos: {fileID: 1965123021}
+  _bullet: {fileID: 2572997683899277164, guid: 6983ddc799d716243a2caf412fa74f0a, type: 3}
 --- !u!1 &4026005961090399333
 GameObject:
   m_ObjectHideFlags: 0
