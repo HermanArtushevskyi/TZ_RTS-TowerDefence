@@ -21,7 +21,9 @@ namespace Scripts
 
         private void OnCollisionEnter(Collision other)
         {
-            Instantiate(_explosionVFX, transform.position, Quaternion.identity);
+            GameObject explosion = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
+            ExplosionBehaviour explosionBehaviour = explosion.AddComponent<ExplosionBehaviour>();
+            explosionBehaviour.duration = 5;
             Destroy(gameObject);
         }
     }
